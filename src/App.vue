@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home">
+    <navbar-component />
+    <div class="main">
+      <div class="feeds">
+        <h2>Feeds</h2>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavbarComponent from "./components/NavbarComponent.vue";
+import gambar from "./assets/profil_1.jpeg"
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    NavbarComponent,
+  },
+  provide(){
+    return {
+      nama_user: 'muhammad mubarok',
+      username: '@awok',
+      profile: gambar
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.main {
+  align-content: center;
+  margin: 0px 250px 250px;
+  padding-top: 20px;
 }
 </style>
