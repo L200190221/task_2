@@ -2,6 +2,9 @@
   <div class="home">
     <navbar-component />
     <div class="main">
+      <div class="inputcard">
+        <input-component />
+      </div>
       <h2>Feeds</h2>
       <div class="feeds">
         <card-component :tweets="tweet" />
@@ -12,10 +15,11 @@
 <script>
 import NavbarComponent from "./components/NavbarComponent.vue";
 import CardComponent from "./components/CardComponent.vue";
+import InputComponent from "./components/InputComponent.vue"
 import gambar from "./assets/profil_1.jpeg"
 export default {
   components: {
-    NavbarComponent,CardComponent
+    NavbarComponent,CardComponent,InputComponent
   },
   data(){
     return {
