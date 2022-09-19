@@ -11,7 +11,6 @@
         <div class="nama-user">{{nama_user}}</div>
         <div class="username">{{ username }}</div>  
       </div>
-      
     </div>
   </div>
 </template>
