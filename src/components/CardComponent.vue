@@ -18,10 +18,10 @@
             <div class="like" style="float:left" @click="clicklike(index),data.like=!data.like">
                 like
                 <p v-if="data.like"> 
-                   {{ data.total_like +1}}
+                   {{ data.total_like }}
                 </p> 
                 <p v-else> 
-                   {{ data.total_like }}
+                   {{ data.total_like +1}}
                 </p> 
             </div>
             <div class="retweet" @click="data.total_retweet++">
