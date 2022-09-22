@@ -15,11 +15,16 @@
             {{ data.tweet_card }}
         </div>
         <div class="icon">
-            <div class="like"  style="float:left">
+            <div class="like" style="float:left" @click="clicklike(index),data.like=!data.like">
                 like
-                {{ data.total_like }}
+                <p v-if="data.like"> 
+                   {{ data.total_like +1}}
+                </p> 
+                <p v-else> 
+                   {{ data.total_like }}
+                </p> 
             </div>
-            <div class="retweet" @click="counter(index)">
+            <div class="retweet" @click="data.total_retweet++">
                 retweet
                 {{ data.total_retweet }}
             </div>
@@ -31,12 +36,11 @@
 <script>
 export default {
     props: {tweets: Array}, 
-
     methods: {
-        counter(index){
-            this.tweets[index].total_retweet
-            console.log(index);
-        }
+        clicklike(index){
+            /* this.tweets[index].like=!this.tweets */
+            console.log(this.tweets[index].total_retweet)
+        },
     }
 }
 </script>
